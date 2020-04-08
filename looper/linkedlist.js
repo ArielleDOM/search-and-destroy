@@ -1,6 +1,6 @@
 class Node {
   constructor (value) {
-    this.value = value //z
+    this.value = value
     this.previous = null
     this.next = null
   }
@@ -9,18 +9,18 @@ class Node {
 class LinkedList {
   constructor () {
     this.head = null
-    this.tail = null //z
+    this.tail = null 
   }
 
   addToHead (value) {
     const newNode = new Node(value)
-    const formerHead = this.head //null
-    this.head = newNode //z
+    const formerHead = this.head 
+    this.head = newNode 
     if (formerHead) {
       formerHead.previous = newNode
       newNode.next = formerHead
     } else {
-      this.tail = newNode //z
+      this.tail = newNode 
     }
   }
 

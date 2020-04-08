@@ -5,13 +5,14 @@ const isLoop = (linkedlist) => {
 let firstNode = linkedlist.head;
 let secondNode = firstNode.next;
 
-while(firstNode !== secondNode){
-    if(firstNode === null || secondNode === null){
-        return false
+    while(firstNode !== secondNode){
+        if(firstNode === null || secondNode === null){
+            return false
+        }
+       firstNode =  firstNode.next;
+        secondNode = secondNode.next.next;   
     }
-    firstNode.next;
-    secondNode.next.next;   
-}
+    return true
 };
 
 
@@ -23,4 +24,5 @@ This function should return the Node value the loop begins at
 Remember to write some test specs too!
 
 */
+
 module.exports = isLoop
